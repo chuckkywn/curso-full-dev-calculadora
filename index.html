@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculadora">
+        <div class="angry-grid">
+            <div id="item-0">
+                <div class="result" id="result"></div>
+            </div>
+            <div id="item-1"><button class="btn-calc">MRC</button></div>
+            <div id="item-2"><button class="btn-calc">M-</button></div>
+            <div id="item-3"><button class="btn-calc">M+</button></div>
+            <div id="item-4"><button class="btn-calc" onclick="setOperador('%')">%</button></div>
+            <div id="item-5"><button class="btn-calc" onclick="resetCalc()">ON/C</button></div>
+            <div id="item-6"><button class="btn-calc" onclick="setValor('7')">7</button></div>
+            <div id="item-7"><button class="btn-calc" onclick="setValor('8')">8</button></div>
+            <div id="item-8"><button class="btn-calc" onclick="setValor('9')">9</button></div>
+            <div id="item-9"><button class="btn-calc" onclick="setOperador('r')">√</button></div>
+            <div id="item-10"><button class="btn-calc">🎵</button></div>
+            <div id="item-11"><button class="btn-calc" onclick="setValor('4')">4</button></div>
+            <div id="item-12"><button class="btn-calc" onclick="setValor('5')">5</button></div>
+            <div id="item-13"><button class="btn-calc" onclick="setValor('6')">6</button></div>
+            <div id="item-14"><button class="btn-calc" onclick="setOperador('-')">➖</button></div>
+            <div id="item-15"><button class="btn-calc" onclick="setOperador('/')">➗</button></div>
+            <div id="item-16"><button class="btn-calc" onclick="setValor('1')">1</button></div>
+            <div id="item-17"><button class="btn-calc" onclick="setValor('2')">2</button></div>
+            <div id="item-18"><button class="btn-calc" onclick="setValor('3')">3</button></div>
+            <div id="item-19"><button class="btn-calc" onclick="setOperador('*')">✖️</button></div>
+            <div id="item-20"><button class="btn-calc" onclick="setValor('0')">0</button></div>
+            <div id="item-21"><button class="btn-calc" onclick="setPontoFlutuante()">.</button></div>
+            <div id="item-22"><button class="btn-calc">+/-</button></div>
+            <div id="item-23"><button class="btn-calc" onclick="calculator()">🟰</button></div>
+            <div id="item-24"><button class="btn-calc" onclick="setOperador('+')">➕</button></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
