@@ -29,6 +29,7 @@ function calculadoraWithReturn(valor1, valor2, opr){
     }else if(opr == "%"){
         result = (valor1 % valor2);
     }else if(opr == "r"){
+        result = Math.sqrt(valor1);
         //Implementar raiz quadrada;
     }else{
         result = "NNaN";
@@ -70,10 +71,41 @@ function setOperador(valor){
     result.innerText = valor1+" "+operador;
 }
 
-function setPontoFlutuante(){
-    //Implemente adicionar ponto flutuante nos valores
+//---------------------PONTO FLUTUANTE--------------------//
+
+// Função para adicionar um ponto flutuante
+function setPontoFlutuante() {
+    if (operador === null) { // Se não houver operador, estamos lidando com valor1
+        if (valor1 === null) {
+            valor1 = "0."; // Inicia com 0. se valor1 estiver vazio
+        } else if (!valor1.includes(".")) {
+            valor1 += "."; // Adiciona o ponto a valor1 se não existir
+        }
+    } else { // Se já houver um operador, estamos lidando com valor2
+        if (valor2 === null) {
+            valor2 = "0."; // Inicia com 0. se valor2 estiver vazio
+        } else if (!valor2.includes(".")) {
+            valor2 += "."; // Adiciona o ponto a valor2 se não existir
+        }
+    }
+    atualizarDisplay(); // Atualiza o display após adicionar o ponto
 }
 
-function resetCalc(){
-    //Implemente a funcao para resetar os valores
+//----------------FUNÇÃO PARA ZERAR CALCULADORA------------------//
+
+// Função para limparr a calculadora
+function resetCalc() {
+    valor1 = null; // Limpa o primeiro número
+    valor2 = null; // Limpa o segundo número
+    operador = null; // Limpa o operador
+    result.textContent = "0"; // Reseta o display para 0
+}
+
+// Função para atualizar o display
+function atualizarDisplay() {
+    if (valor1 === null) {
+        result.textContent = "0"; // Exibe 0 se não houver valor
+    } else {
+        result.textContent = valor1 + (operador ? " " + operador + " " + (valor2 || "") : "");
+    }
 }
